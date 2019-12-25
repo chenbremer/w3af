@@ -130,13 +130,16 @@ class sqli(AuditPlugin):
 
         # SQLite
         (r'could not prepare statement', dbms.SQLITE),
-
+        
+        # remove generic errors - causing False Positives
+        '''
         # Generic errors..
         (r'Unknown column', dbms.UNKNOWN),
         (r'where clause', dbms.UNKNOWN),
         (r'SqlServer', dbms.UNKNOWN),
         (r'syntax error', dbms.UNKNOWN),
         (r'Microsoft OLE DB Provider', dbms.UNKNOWN),
+        '''
     )
     _multi_in = MultiIn(x[0] for x in SQL_ERRORS_STR)
 
