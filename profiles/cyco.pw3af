@@ -1,0 +1,82 @@
+[profile]
+description = cyco
+name = cyco
+
+[grep.directory_indexing]
+
+[grep.code_disclosure]
+
+[audit.xss]
+persistent_xss = False
+
+[audit.os_commanding]
+
+[audit.lfi]
+
+[audit.blind_sqli]
+eq_limit = 0.9
+
+[audit.sqli]
+
+[audit.rfi]
+listen_address = 192.168.5.73
+listen_port = 44449
+use_w3af_site = True
+
+[audit.global_redirect]
+
+[crawl.web_spider]
+only_forward = False
+follow_regex = .*
+ignore_regex = 
+ignore_extensions = 
+
+[target]
+target = http://178.79.162.71/www/
+
+[misc-settings]
+fuzz_cookies = False
+fuzz_form_files = True
+fuzz_url_filenames = False
+fuzz_url_parts = False
+fuzzed_files_extension = gif
+fuzzable_headers = 
+form_fuzzing_mode = tmb
+stop_on_first_exception = False
+max_discovery_time = 120
+max_scan_time = 240
+path_max_variants = 50
+params_max_variants = 15
+max_equal_form_variants = 5
+interface = ppp0
+local_ip_address = 100.124.88.68
+non_targets = 
+form_id_list = []
+form_id_action = exclude
+msf_location = /opt/metasploit3/bin/
+vulndb_language = en
+
+[http-settings]
+timeout = 0
+headers_file = 
+basic_auth_user = 
+basic_auth_passwd = 
+basic_auth_domain = 
+ntlm_auth_domain = 
+ntlm_auth_user = 
+ntlm_auth_passwd = 
+ntlm_auth_url = 
+cookie_jar_file = 
+ignore_session_cookies = False
+proxy_port = 8080
+proxy_address = 
+user_agent = w3af.org
+rand_user_agent = False
+max_file_size = 400000
+max_http_retries = 2
+max_requests_per_second = 0
+always_404 = 
+never_404 = 
+string_match_404 = 
+url_parameter = 
+
